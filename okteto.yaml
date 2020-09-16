@@ -1,0 +1,3 @@
+name: fastapi
+command: bash
+workdir: /app

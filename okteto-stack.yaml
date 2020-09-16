@@ -1,0 +1,27 @@
+name: fastapi-mongo
+services:
+  fastapi:
+    public: true
+    image: fastapi-mongo:latest
+    build: .
+    replicas: 1
+    ports:
+      - 80
+    resources:
+      cpu: 100m
+      memory: 128Mi
+    environment:
+      - MONGO_DETAILS=mongodb://mongodb:27017
+      - secret=dev
+      
+
+  mongodb:
+    image: bitnami/mongodb:latest
+    ports:
+      - 27017
+    resources:
+      cpu: 100m
+      memory: 128Mi
+      storage: 1Gi
+    volumes:
+      - /bitnami/mongodb

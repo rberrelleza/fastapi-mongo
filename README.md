@@ -61,6 +61,20 @@ To deploy to Heroku, connect your repository to the Heroku application and deplo
 
 Ensure you add the environment variable `MONGO_DETAILS` in your application's settings.
 
+## Deploying to Okteto Cloud
+
+Deploy your application to [Okteto Cloud](https://okteto.com) with one click, no configuration required.
+
+<a href="https://cloud.okteto.com/deploy">
+  <img src="https://okteto.com/develop-okteto.svg" alt="Develop on Okteto">
+</a>
+
+[Install the okteto cli](https://okteto.com/docs/getting-started/installation) and develop your application in a cloud-based development environment:
+
+```
+okteto up
+```
+
 ## Dockerising
 
 To build a docker image for this boilerplate, create a duplicate `.env` file but with name `env`. Next, build an image:
